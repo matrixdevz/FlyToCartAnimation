@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dip"
+    android:layout_marginBottom="5dp"
+    >
+
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/itemIV"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:src="@drawable/one"
+        android:layout_centerVertical="true"
+        />
+
+    <ImageView
+        android:layout_marginLeft="10dp"
+        android:id="@+id/itemCopyIV"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:src="@drawable/one"
+        android:layout_centerVertical="true"
+        />
+
+
+    <View
+        android:layout_marginTop="5dp"
+        android:background="#ff262626"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"/>
+</RelativeLayout>
