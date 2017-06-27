@@ -3,7 +3,7 @@
 
 ***This Demo contains how you can implements image view fly to cart animation using recycler view in Android ***
 
-<script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Buy Me a Coffee', '#46b798', 'A70429SK');kofiwidget2.draw();</script> 
+<a href='https://ko-fi.com/A70429SK' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 #You can see how it works 
 
