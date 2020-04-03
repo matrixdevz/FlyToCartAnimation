@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.codezlab.flytocartanimation.MainActivity">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:local="http://schemas.android.com/apk/res-auto"
@@ -19,22 +19,20 @@
         local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-
         <RelativeLayout
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="-5dip"
-            android:layout_marginRight="10dip">
+            android:layout_marginStart="-5dip"
+            android:layout_marginEnd="10dip">
 
 
             <TextView
                 android:id="@id/toolbar_center_title"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
-                android:layout_marginRight="5dip"
+                android:layout_marginEnd="5dip"
                 android:ellipsize="end"
                 android:singleLine="true"
                 android:text=""
@@ -47,7 +45,7 @@
                 android:id="@id/cartRelativeLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:clickable="true"
                 android:paddingRight="3dip">
@@ -59,15 +57,17 @@
                     android:background="@null"
                     android:clickable="false"
                     android:padding="5dip"
+                    android:rotationY="@integer/locale_mirror_flip"
+                    android:autoMirrored="true"
                     android:src="@drawable/cart" />
 
                 <TextView
                     android:id="@id/textNotify"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignRight="@id/cartButtonIV"
+                    android:layout_alignEnd="@id/cartButtonIV"
                     android:layout_alignTop="@id/cartButtonIV"
-                    android:layout_marginRight="5dip"
+                    android:layout_marginEnd="5dip"
                     android:layout_marginTop="5dip"
                     android:background="@drawable/notification_circle"
                     android:gravity="center"
@@ -81,10 +81,10 @@
         </RelativeLayout>
 
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_below="@+id/toolbar"
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"

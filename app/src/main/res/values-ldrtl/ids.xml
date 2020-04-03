@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="toolbar" type="id"/>
+    <item name="toolbar_center_title" type="id"/>
+    <item name="cartRelativeLayout" type="id"/>
+    <item name="textNotify" type="id"/>
+    <item name="cartButtonIV" type="id"/>
+
+</resources>

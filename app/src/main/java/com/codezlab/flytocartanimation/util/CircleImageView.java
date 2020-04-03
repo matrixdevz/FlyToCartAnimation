@@ -3,6 +3,7 @@ package com.codezlab.flytocartanimation.util;
 /**
  * Created by coderzlab on 18/8/16.
  */
+
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
@@ -17,8 +18,9 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
+
+import androidx.appcompat.widget.AppCompatImageView;
 
 public class CircleImageView extends AppCompatImageView {
 

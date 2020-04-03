@@ -1,15 +1,16 @@
 package com.codezlab.flytocartanimation;
 
 import android.animation.Animator;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.codezlab.flytocartanimation.adapters.ProductAdapter;
 import com.codezlab.flytocartanimation.models.Product;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private TextView titleTV;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
 
-        titleTV=(TextView)mToolbar.findViewById(R.id.toolbar_center_title);
+        titleTV = (TextView) mToolbar.findViewById(R.id.toolbar_center_title);
 
         titleTV.setText("FlyToCartAnimation");
 
