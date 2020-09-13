@@ -3,17 +3,20 @@ package com.codezlab.flytocartanimation.util;
 /**
  * Created by coderzlab on 18/8/16.
  */
+
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.TimeInterpolator;
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
@@ -43,16 +46,22 @@ public class CircleAnimationUtil {
     private WeakReference<Activity> mContextReference;
     private int mBorderWidth = 4;
     private int mBorderColor = Color.BLACK;
+    private int deviceWidth;
     //    private CircleLayout mCircleLayout;
     private Bitmap mBitmap;
     private CircleImageView mImageView;
     private Animator.AnimatorListener mAnimationListener;
+    Configuration config;
 
     public CircleAnimationUtil() {
     }
 
     public CircleAnimationUtil attachActivity(Activity activity) {
-        mContextReference = new WeakReference<Activity>(activity);
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        deviceWidth = displayMetrics.widthPixels;
+        config = activity.getResources().getConfiguration();
+        mContextReference = new WeakReference<>(activity);
         return this;
     }
 
@@ -114,7 +123,11 @@ public class CircleAnimationUtil {
             int[] src = new int[2];
             mTarget.getLocationOnScreen(src);
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(mTarget.getWidth(), mTarget.getHeight());
-            params.setMargins(src[0], src[1], 0, 0);
+            if (config.getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
+                params.setMargins(0, src[1], deviceWidth - (src[0] + mTarget.getWidth()), 0);
+            } else {
+                params.setMargins(src[0], src[1], 0, 0);
+            }
             if (mImageView.getParent() == null)
                 decoreView.addView(mImageView, params);
         }
